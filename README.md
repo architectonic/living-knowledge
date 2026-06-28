@@ -17,6 +17,8 @@ Install it with:
 npx architectonic add living-knowledge
 ```
 
+It is intentionally an addon, not part of the default `constitution` scaffold.
+
 ## Role
 
 A living knowledge system maintains a corpus through explicit campaigns, review procedures, verification gates, provenance records, and publication rules.
@@ -26,6 +28,19 @@ It is not the same as `knowledge`.
 ```text
 knowledge         = the corpus
 living-knowledge  = the maintenance pattern for a corpus
+```
+
+## Relationship to the rest of the stack
+
+```text
+constitution      = root scaffold
+doctrine          = governs why and under what rules the corpus evolves
+identity          = defines who may review, publish, or retire material
+project           = provides the operating context for a concrete corpus
+skills            = provides reusable verification and upkeep procedures
+knowledge         = stores the corpus itself
+meta              = records system-level upkeep and audit knowledge
+living-knowledge  = optional addon that operationalizes corpus maintenance campaigns
 ```
 
 ## Maintenance Cycle
