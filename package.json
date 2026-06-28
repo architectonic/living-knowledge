@@ -1,0 +1,17 @@
+{
+  "name": "architectonic-living-knowledge",
+  "version": "0.1.0",
+  "description": "Optional maintenance package for Architectonic knowledge systems.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "files": [
+    "README.md",
+    "living-knowledge.md"
+  ],
+  "keywords": [
+    "architectonic",
+    "knowledge",
+    "verification",
+    "okf"
+  ]
+}
