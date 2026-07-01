@@ -4,6 +4,13 @@
   "description": "Optional maintenance package for Architectonic knowledge systems.",
   "license": "Apache-2.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/architectonic/living-knowledge.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "README.md",
     "living-knowledge.md"
