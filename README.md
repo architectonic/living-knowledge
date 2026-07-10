@@ -1,7 +1,7 @@
 ---
 type: Entry Point
 title: living-knowledge
-description: Optional template for governed knowledge maintenance through campaigns, verification, publication gates, and recurring review.
+description: Runtime-neutral package for governed knowledge maintenance through review cycles, provenance, verification, and publication gates.
 tags: [living-knowledge, campaigns, verification, knowledge, provenance, okf]
 okf_version: "0.2"
 status: draft
@@ -9,7 +9,7 @@ status: draft
 
 # living-knowledge
 
-`living-knowledge` is an optional Architectonic package for maintaining a knowledge corpus through explicit review cycles.
+`living-knowledge` defines how a changing knowledge corpus is reviewed, revised, linked, retired, and published over time.
 
 Install it with:
 
@@ -17,36 +17,34 @@ Install it with:
 npx architectonic add living-knowledge
 ```
 
-It is intentionally an addon, not part of the default `constitution` scaffold.
-
 ## Role
 
-A living knowledge system maintains a corpus through explicit campaigns, review procedures, verification gates, provenance records, publication rules, and recurring operation.
-
-It is not the same as `knowledge`.
-
 ```text
-knowledge         = the corpus
-living-knowledge  = the maintenance pattern for a corpus
+knowledge         = retained claims, sources, evidence, uncertainty, and gaps
+living-knowledge  = the maintenance process applied to that corpus
 ```
 
-## Relationship to the rest of the stack
+A maintenance process may use bounded campaigns, recurring review, source comparison, verification gates, provenance records, publication rules, and explicit retirement decisions.
+
+## Relationship to the ensemble
 
 ```text
-constitution      = root scaffold
-doctrine          = governs why and under what rules the corpus changes
+constitution      = composes the ensemble
+doctrine          = governs why and under what rules a corpus changes
 identity          = defines who may review, publish, or retire material
-project           = provides the operating context for a concrete corpus
-skills            = provides reusable verification and upkeep procedures
-knowledge         = stores the corpus itself
-meta              = records system-level upkeep and audit knowledge
-living-knowledge  = coordinates corpus maintenance campaigns
+project           = provides operating context for a concrete corpus
+skills            = provides reusable verification and maintenance procedures
+knowledge         = stores the corpus
+models            = records model constraints relevant to extraction, synthesis, and retrieval
+agents            = may perform delegated maintenance work within explicit permissions
+living-knowledge  = coordinates reviewed corpus change
+meta              = audits the maintenance process and its revision policy
 ```
 
 ## Maintenance cycle
 
 ```text
-define a bounded campaign
+define a bounded question or gap
 inspect candidate sources
 compare them with the existing corpus
 assess overlap, utility, provenance, uncertainty, and risk
@@ -54,7 +52,7 @@ propose additions, revisions, links, or retirements
 verify accepted changes
 publish reviewed outputs
 record evidence and decisions
-review the next highest-value gap
+select the next useful gap
 ```
 
 ## Operating principles
@@ -63,34 +61,26 @@ review the next highest-value gap
 - Generated indexes, embeddings, graph exports, and summaries remain replaceable.
 - Claims retain recoverable provenance.
 - Stale, conflicting, weakly sourced, and missing material is reported explicitly.
-- Typed relationships supplement source pages; they do not replace them.
+- Typed relationships supplement source pages rather than replacing them.
 - Taxonomies may evolve through versioned schemas and migrations.
-- Publication and destructive changes pass through defined human or delegated review gates.
-- Maintenance work is selected by value and evidence, not by a need to keep every role busy.
+- Publication and destructive changes pass through defined review gates.
+- Maintenance work is selected by value and evidence rather than by a need to keep processes active.
 
-## Recurring operation
+## Coordination
 
-A corpus may use one scheduler or another coordination mechanism. The important constraint is shared durable state: independent workers should not create competing queues, duplicate campaigns, or conflicting sources of truth.
-
-A minimal recurring loop is:
+A corpus may use a scheduler, queue, ledger, or another coordination mechanism. The durable requirement is shared state: independent workers should not create competing queues, duplicate campaigns, or conflicting sources of truth.
 
 ```text
 observe
-plan one bounded change
+select one bounded change
 act
 verify
 record evidence and decisions
 repeat when useful
 ```
 
-Roles are optional implementation aids. A corpus may distinguish reporting, source review, graph maintenance, enrichment, publication, and criticism when those boundaries improve accountability. It should not create permanent roles or artifacts without recurring work to justify them.
-
-## Shared state
-
-A concrete implementation may maintain a dated ledger containing status, queues, reports, and review evidence. Templates in `operations/daily/` provide one possible shape; they are not required ontology.
+Roles are implementation aids. Reporting, source review, graph maintenance, enrichment, publication, and criticism should remain separate only when those distinctions improve accountability.
 
 ## Boundary
 
-This package defines maintenance procedures. It should not contain the corpus it maintains.
-
-A clone may use this package to maintain any topic-specific corpus. The maintenance pattern should stay domain-neutral; the corpus supplies the subject matter.
+This package defines maintenance procedures. It should not contain the corpus it maintains. The maintenance process remains domain-neutral; the corpus supplies the subject matter.
