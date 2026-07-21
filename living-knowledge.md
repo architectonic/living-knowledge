@@ -1,49 +1,36 @@
 ---
 type: Living Knowledge
 title: Living Knowledge Contract
-description: Root contract for campaign-based knowledge maintenance.
-tags: [living-knowledge, campaign, verification, publication, okf]
-okf_version: "0.1"
-status: draft
+description: Governed maintenance for frequently changing knowledge corpora.
+tags: [living-knowledge, maintenance, verification, publication, provenance]
+protocol_version: "0.2.0"
+status: experimental
 ---
 
 # Living Knowledge Contract
 
-A living knowledge system is a governed maintenance pattern for a knowledge corpus.
+`knowledge` is the corpus. `living-knowledge` is an optional maintenance mode applied to a corpus whose sources or claims change frequently.
 
-It preserves a corpus by revising it under doctrine, evidence, verification, and publication rules.
-
-## Required Objects
+## Maintenance cycle
 
 ```text
-campaign
-candidate source
-corpus item
-review note
-verification gate
-publication record
-retirement record
-next campaign
+define a bounded question or gap
+inspect candidate sources
+compare them with the current corpus
+assess provenance, overlap, utility, uncertainty, staleness, and risk
+propose additions, revisions, links, or retirements
+verify accepted changes
+publish through defined gates
+record evidence and decisions
+stop or select the next useful gap
 ```
 
-## Campaign Rule
+## Rules
 
-A campaign is a bounded improvement mission. It should have:
+- Canonical corpus files remain readable without the maintenance runtime.
+- Discovery and comparison may be automated; publication and destructive changes remain governed.
+- Claims retain recoverable provenance.
+- Stale, conflicting, weakly sourced, and missing material is reported explicitly.
+- Work is selected by value and evidence, not by a need to keep an autonomous loop active.
 
-```text
-objective
-scope
-inputs
-allowed actions
-review standard
-expected output
-stop condition
-```
-
-## Publication Rule
-
-Discovery and analysis may be routine. Durable publication should require verification and an audit trail.
-
-## Non-goal
-
-Living knowledge is not uncontrolled self-mutation. It is governed maintenance of a corpus.
+This layer does not authorize uncontrolled self-mutation.
