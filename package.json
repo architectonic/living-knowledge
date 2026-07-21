@@ -1,7 +1,7 @@
 {
   "name": "architectonic-living-knowledge",
-  "version": "0.1.2",
-  "description": "Optional maintenance package for Architectonic knowledge systems.",
+  "version": "0.2.0",
+  "description": "Optional maintenance layer for frequently changing knowledge corpora.",
   "license": "Apache-2.0",
   "type": "module",
   "repository": {
@@ -13,12 +13,21 @@
   },
   "files": [
     "README.md",
-    "living-knowledge.md"
+    "CHANGELOG.md",
+    "architectonic.protocol.json",
+    "living-knowledge.md",
+    "scripts"
   ],
+  "scripts": {
+    "validate": "node scripts/validate-package.mjs",
+    "test": "npm run validate"
+  },
   "keywords": [
     "architectonic",
-    "knowledge",
-    "verification",
-    "okf"
+    "living-knowledge",
+    "human-ai",
+    "agents",
+    "provenance",
+    "governance"
   ]
 }
