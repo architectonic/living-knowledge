@@ -1,5 +1,7 @@
 # Living Knowledge
 
+**Architectonic layer:** [main CLI and adaptive profiles](https://github.com/architectonic/architectonic)
+
 > **Status: experimental, pre-1.0.** Living knowledge is optional governed maintenance for a knowledge corpus. It is not uncontrolled self-modification, an autonomous research mandate, or a substitute for publication authority.
 
 ```text
