@@ -15,6 +15,8 @@ Use the combined profile:
 npx architectonic@latest init current-corpus --preset living-knowledge-system --source npm
 ```
 
-`living-knowledge` is not operationally standalone. It requires a `knowledge` corpus to maintain. Skills and meta are recommended for repeatable procedure, evaluation, drift review, and retirement.
+`living-knowledge` is not operationally standalone. It requires a `knowledge` corpus to maintain and a `rail` ledger when maintenance continues across runs. Skills and meta remain optional companions for reusable procedure, evaluation, drift review, and retirement.
+
+The rail owns work selection and current state. Living Knowledge does not create daily status folders, role reports, or parallel queues.
 
 See [`WHEN_TO_USE.md`](./WHEN_TO_USE.md) and [`living-knowledge.md`](./living-knowledge.md).

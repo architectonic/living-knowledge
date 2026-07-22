@@ -8,5 +8,6 @@
   "status": "experimental",
   "maturity": "pre-1.0",
   "runtime_neutral": true,
+  "operational_requires": ["knowledge", "rail"],
   "claim_policy": "Claims must be labeled as design objectives, demonstrated mechanisms, internal observations, public benchmarks, or external replications."
 }

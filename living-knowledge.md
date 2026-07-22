@@ -14,14 +14,15 @@ status: experimental
 ## Maintenance cycle
 
 ```text
-define a bounded question or gap
+select one dependency-clear item from the project work ledger
+confirm its bounded question or gap
 inspect candidate sources
 compare them with the current corpus
 assess provenance, overlap, utility, uncertainty, staleness, and risk
 propose additions, revisions, links, or retirements
 verify accepted changes
 publish through defined gates
-record evidence and decisions
+record evidence and the resulting ledger transition
 stop or select the next useful gap
 ```
 
@@ -32,5 +33,7 @@ stop or select the next useful gap
 - Claims retain recoverable provenance.
 - Stale, conflicting, weakly sourced, and missing material is reported explicitly.
 - Work is selected by value and evidence, not by a need to keep an autonomous loop active.
+- Backlog, queue, now, reports, and dashboards are views over the one work ledger, never additional work authorities.
+- An empty ready queue is a clean stop; a scheduler wake does not justify invented maintenance.
 
 This layer does not authorize uncontrolled self-mutation.

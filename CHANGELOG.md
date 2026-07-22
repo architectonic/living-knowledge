@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Bind recurring corpus maintenance to one Architectonic Rail work ledger.
+- Remove daily status, queue, report, role-calendar, and operations-log templates that duplicated work state.
+- Treat an empty ready queue as a clean stop rather than a reason to manufacture maintenance.
+
 ## 0.3.0
 
 - Clarify adaptive standalone use and the smallest justified composition.

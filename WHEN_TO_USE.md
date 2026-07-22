@@ -29,6 +29,7 @@ verification standard
 publication gate
 destructive-change gate
 cost and time budget
+canonical work-ledger path when work spans runs
 stop, pause, and retirement conditions
 ```
 
